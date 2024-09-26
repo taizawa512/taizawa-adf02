@@ -1,0 +1,9 @@
+{
+	"name": "taizawa-adf02-git",
+	"location": "japaneast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "19bf4ccd-237e-4516-a144-3add747ca941",
+		"tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3"
+	}
+}
