@@ -7,9 +7,17 @@
 			"metadata": "データ ファクトリ名",
 			"defaultValue": "taizawa-adf02-git"
 		},
-		"ABS001_connectionString": {
+		"AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
-			"metadata": "'ABS001' の 'connectionString' のセキュリティで保護された文字列"
+			"metadata": "'AzureDataLakeStorage1' の 'accountKey' のセキュリティで保護された文字列"
+		},
+		"ABS001_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://taizawaadls01.blob.core.windows.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://taizawaadls01.dfs.core.windows.net/"
 		}
 	},
 	"variables": {
@@ -25,7 +33,26 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"connectionString": "[parameters('ABS001_connectionString')]"
+					"serviceEndpoint": "[parameters('ABS001_properties_typeProperties_serviceEndpoint')]",
+					"accountKind": "StorageV2"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "ｙｙｙ",
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					}
 				}
 			},
 			"dependsOn": []

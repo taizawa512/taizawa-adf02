@@ -7,9 +7,17 @@
 			"metadata": "データ ファクトリ名",
 			"defaultValue": "taizawa-adf02-git"
 		},
-		"ABS001_connectionString": {
+		"AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
-			"metadata": "'ABS001' の 'connectionString' のセキュリティで保護された文字列"
+			"metadata": "'AzureDataLakeStorage1' の 'accountKey' のセキュリティで保護された文字列"
+		},
+		"ABS001_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://taizawaadls01.blob.core.windows.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://taizawaadls01.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -38,8 +46,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ABS001_connectionString": {
-						"value": "[parameters('ABS001_connectionString')]"
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"ABS001_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('ABS001_properties_typeProperties_serviceEndpoint')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					}
 				}
 			},

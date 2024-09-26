@@ -5,8 +5,14 @@
 		"factoryName": {
 			"value": "taizawa-adf02-git"
 		},
-		"ABS001_connectionString": {
+		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
+		},
+		"ABS001_properties_typeProperties_serviceEndpoint": {
+			"value": "https://taizawaadls01.blob.core.windows.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://taizawaadls01.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""
