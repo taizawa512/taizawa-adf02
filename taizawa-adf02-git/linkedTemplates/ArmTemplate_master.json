@@ -27,6 +27,10 @@
 			"type": "string",
 			"defaultValue": "https://taizawa-functions-01.azurewebsites.net"
 		},
+		"AzureFunction1_properties_typeProperties_resourceId": {
+			"type": "string",
+			"defaultValue": "ssss"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "リンクされた ARM テンプレートを含むストレージ アカウントの URI"
@@ -68,6 +72,9 @@
 					},
 					"AzureFunction1_properties_typeProperties_functionAppUrl": {
 						"value": "[parameters('AzureFunction1_properties_typeProperties_functionAppUrl')]"
+					},
+					"AzureFunction1_properties_typeProperties_resourceId": {
+						"value": "[parameters('AzureFunction1_properties_typeProperties_resourceId')]"
 					}
 				}
 			},

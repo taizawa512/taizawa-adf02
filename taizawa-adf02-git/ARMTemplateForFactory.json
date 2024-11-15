@@ -26,6 +26,10 @@
 		"AzureFunction1_properties_typeProperties_functionAppUrl": {
 			"type": "string",
 			"defaultValue": "https://taizawa-functions-01.azurewebsites.net"
+		},
+		"AzureFunction1_properties_typeProperties_resourceId": {
+			"type": "string",
+			"defaultValue": "ssss"
 		}
 	},
 	"variables": {
@@ -75,7 +79,7 @@
 				"typeProperties": {
 					"functionAppUrl": "[parameters('AzureFunction1_properties_typeProperties_functionAppUrl')]",
 					"authentication": "MSI",
-					"resourceId": "ssss",
+					"resourceId": "[parameters('AzureFunction1_properties_typeProperties_resourceId')]",
 					"functionKey": {
 						"type": "SecureString",
 						"value": "[parameters('AzureFunction1_functionKey')]"

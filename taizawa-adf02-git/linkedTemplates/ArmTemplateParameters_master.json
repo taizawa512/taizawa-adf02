@@ -20,6 +20,9 @@
 		"AzureFunction1_properties_typeProperties_functionAppUrl": {
 			"value": "https://taizawa-functions-01.azurewebsites.net"
 		},
+		"AzureFunction1_properties_typeProperties_resourceId": {
+			"value": "ssss"
+		},
 		"containerUri": {
 			"value": ""
 		},
