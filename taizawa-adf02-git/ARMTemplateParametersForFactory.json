@@ -8,11 +8,17 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureFunction1_functionKey": {
+			"value": ""
+		},
 		"ABS001_properties_typeProperties_serviceEndpoint": {
 			"value": "https://taizawaadls01.blob.core.windows.net/"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://taizawaadls01.dfs.core.windows.net/"
+		},
+		"AzureFunction1_properties_typeProperties_functionAppUrl": {
+			"value": "https://taizawa-functions-01.azurewebsites.net"
 		}
 	}
 }

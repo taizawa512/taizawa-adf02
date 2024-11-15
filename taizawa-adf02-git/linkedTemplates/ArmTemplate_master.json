@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "'AzureDataLakeStorage1' の 'accountKey' のセキュリティで保護された文字列"
 		},
+		"AzureFunction1_functionKey": {
+			"type": "secureString",
+			"metadata": "'AzureFunction1' の 'functionKey' のセキュリティで保護された文字列"
+		},
 		"ABS001_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://taizawaadls01.blob.core.windows.net/"
@@ -18,6 +22,10 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://taizawaadls01.dfs.core.windows.net/"
+		},
+		"AzureFunction1_properties_typeProperties_functionAppUrl": {
+			"type": "string",
+			"defaultValue": "https://taizawa-functions-01.azurewebsites.net"
 		},
 		"containerUri": {
 			"type": "string",
@@ -49,11 +57,17 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
+					"AzureFunction1_functionKey": {
+						"value": "[parameters('AzureFunction1_functionKey')]"
+					},
 					"ABS001_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('ABS001_properties_typeProperties_serviceEndpoint')]"
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureFunction1_properties_typeProperties_functionAppUrl": {
+						"value": "[parameters('AzureFunction1_properties_typeProperties_functionAppUrl')]"
 					}
 				}
 			},
